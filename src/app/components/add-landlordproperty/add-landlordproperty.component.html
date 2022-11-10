@@ -1,0 +1,45 @@
+
+<div  class="container">
+    <mat-card class="user-card">      
+        <mat-card-title style="text-decoration-line: underline;" routerLink="/dashboard/landlord">List of Your Properties</mat-card-title>        
+        <div fxLayout="column" fxLayoutAlign="space-around center" [formGroup]="AddPropertyForm" >
+            <mat-form-field appearance="outline" class="form" style="padding-bottom: 0em;">
+                <mat-label>Property Name</mat-label>
+                <input matInput placeholder="Enter Property Name" formControlName="PropertyName">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="form">
+                <mat-label>Square fts.</mat-label>
+                <input matInput placeholder="Enter Square fts." formControlName="SquareFts">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="form">
+                <mat-label>Rental Cost</mat-label>
+                <input matInput placeholder="Enter Rental Cost" formControlName="RentCost">
+            </mat-form-field >
+            <mat-form-field appearance="outline" class="form">
+                <mat-label>City</mat-label>
+                <input matInput placeholder="Enter City" formControlName="City">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="form">
+                <mat-label>Location</mat-label>
+                <input matInput placeholder="Enter Location" formControlName="Location">
+            </mat-form-field>
+            <div class="example-section">
+                <label class="example-margin">Type:</label>
+                <mat-radio-group formControlName="Type">
+                  <mat-radio-button class="example-margin" checked=true name="Type" value="1">1BHK</mat-radio-button>
+                  <mat-radio-button class="example-margin" name="Type"  value="2">2BHK</mat-radio-button>
+                  <mat-radio-button class="example-margin" name="Type"  value="3">3BHK</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <mat-form-field appearance="outline" class="form">
+                <mat-label>Landlord Name</mat-label>
+                <input matInput placeholder="Landlord Name" formControlName="LandLordName">
+            </mat-form-field>
+            <div class="input-group mb-3" style="width: 45%;" >
+                <input type="file" class="form-control" id="inputGroupFile01" formControlName="PropertyImage">
+            </div>
+            <button mat-raised-button class="btn-user" (click)="onSubmit()">ADD PROPERTY</button>
+        </div>
+    </mat-card>
+</div>
+

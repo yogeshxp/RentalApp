@@ -1,0 +1,66 @@
+<div class="main-container">
+  <mat-card class="container">
+    <div class="form">
+      <div class="title-register">Registration</div>
+      <div [formGroup]="registerForm">
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Full Name</mat-label>
+            <input matInput placeholder="Enter Name" formControlName="FullName"/>
+          </mat-form-field>
+        </div>
+
+        <div class="example-container">
+          <mat-form-field appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="Password" />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput placeholder="Enter Password" formControlName="ConfirmPassword" />
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Enter your email</mat-label>
+            <input
+              class="email-input"
+              matInput
+              placeholder="pat@example.com"
+              required
+              formControlName="Email"
+            />
+            <mat-icon matSuffix>alternate_email</mat-icon>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Phone Number</mat-label>
+            <input matInput placeholder="Enter Phone Number" formControlName="MobileNumber" />
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Enter Place</mat-label>
+            <input matInput placeholder="Enter Place" formControlName="Place" />
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>

@@ -1,0 +1,49 @@
+.btn-user{
+    background-color: rgb(0 0 0 / 77%);
+    color: white;
+    margin-bottom: 14px;
+    width: 34%;
+    height: 50px;
+}
+
+.user-card{
+    align-items: center;
+    text-align: center;
+    padding-top: 2%;
+    box-shadow: none;
+    //border: 1px solid red;
+}
+
+.input-group-text{
+    width: 16%;
+}
+.form{
+    width: 45%;
+}
+
+:host ::ng-deep .mat-form-field-wrapper{
+    padding: 0;
+  }
+
+.btn-user{
+    background-color: rgb(0 0 0 / 77%);
+    color: white;
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0.7em 0 0.7em 0 !important;
+    top: -0.25em;
+  }
+
+  
+  .example-section {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    display: flex;
+    width: 46%;
+  }
+  
+  .example-margin {
+    margin: 0 10px;
+  }
+
+

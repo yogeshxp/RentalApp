@@ -1,0 +1,15 @@
+<div>
+    <div class="agreement-btn">Agreement</div><hr>
+    <div>
+        <div class="header">LandLord Information </div>
+        <p> I <b>{{LandLordName}}</b> agree to rent to the tenant the rental unit. </p>
+        <div class="header">Rent Amount</div>
+        <p>The rent to be paid by the landlord throughout the term of the agreement is Rs.10000</p>
+        <div class="header">Security Deposit</div>
+        <p>Rs. 500 <br> The security deposit will be used for the purpose of repairing damage for which the tent is responsible </p><hr>
+        <div fxLayout="row" fxLayoutAlign="space-around center">
+            <button mat-raised-button color="primary" (click)="onclickrequest()">Agree</button>
+            <button mat-raised-button (click)="closeDialog()">Cancel</button>
+        </div>
+    </div>
+</div>

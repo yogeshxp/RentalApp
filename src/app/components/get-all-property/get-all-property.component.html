@@ -1,0 +1,31 @@
+
+<div>
+    <mat-card class="user-card">
+        <div>
+            <mat-card-title style="text-decoration-line: underline;">All Properties</mat-card-title>
+        </div>
+
+    </mat-card>
+</div>
+<div class="Property-info">
+    <!-- <div style=" border: 1px solid red;" *ngFor="let Property of PropertyList"> -->
+    <mat-card class="mat-card-info" *ngFor="let Property of PropertyList" >
+        <img mat-card-image src="../../../assets/Image/property1.jpg" alt="">
+        <div>
+            <div style="font-size:20px; color:rgb(0 0 0 / 77%); margin-bottom: 4px;">
+                {{Property.PropertyName}}
+            </div>
+            <div>
+                {{Property.Location}}
+            </div>
+            <div>
+                {{Property.City}}
+            </div>
+            <div class="btn-action" fxLayout="row" fxLayoutAlign="space-around center">
+                <button mat-flat-button color="primary" routerLink="/dashboard/propertydetail/{{Property.PropertyId}}">See Details</button>
+            </div>
+        </div>
+    </mat-card>
+
+</div>
+<!-- </div> -->

@@ -1,0 +1,43 @@
+<div>
+    <mat-card class="user-card">
+        <button mat-raised-button class="btn-user" routerLink="/dashboard/addproperty">ADD NEW PROPERTY</button>
+        <div>
+            <mat-card-title style="font-size: 19px;" *ngIf="PropertyList?.length > 0">{{PropertyList.length}} - Property Added</mat-card-title>
+            <mat-card-subtitle style="margin-bottom: 31px;">Add New Propery Here</mat-card-subtitle>
+            <mat-card-title style="text-decoration-line: underline;">List of Your Properties</mat-card-title>
+        </div>
+
+    </mat-card>
+</div>
+<div class="Property-info">
+    <!-- <div style=" border: 1px solid red;" *ngFor="let Property of PropertyList"> -->
+    <mat-card class="mat-card-info" *ngFor="let Property of PropertyList" >
+        <img mat-card-image src="../../../assets/Image/property1.jpg" alt="">
+        <div>
+            <div style="font-size:20px; color:rgb(0 0 0 / 77%); margin-bottom: 4px;">
+                {{Property.PropertyName}}
+            </div>
+            <div>
+                {{Property.Location}}
+            </div>
+            <div>
+                {{Property.City}}
+            </div>
+            <div>
+                {{Property.SquareFts}} fts
+            </div>
+            <div>
+                Rs. {{Property.RentCost}}
+            </div>
+            <div style="margin-bottom:6px ;">
+                {{Property.Type}}BHk
+            </div>
+            <div class="btn-action" fxLayout="row" fxLayoutAlign="space-around center">
+                <button mat-flat-button color="primary" (click)="openDialog(Property)">Edit</button>
+                <button mat-flat-button color="primary" routerLink="/dashboard/seerequest/{{Property.PropertyId}}">See Request</button>
+                <button mat-flat-button color="warn" (click)="deleteproperty(Property)">Delete</button>
+            </div>
+        </div>
+    </mat-card>
+</div>
+<!-- </div> -->

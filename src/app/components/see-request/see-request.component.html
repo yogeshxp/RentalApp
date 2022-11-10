@@ -1,0 +1,29 @@
+<div>
+    <mat-card class="user-card">
+        <div>
+            <mat-card-title style="text-decoration-line: underline;">Your All Request</mat-card-title>
+        </div>
+
+    </mat-card>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">See More detail</th>
+            <th scope="col">Mobile Number</th>
+
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let Array of RequestArray">
+            <th scope="row"  >1</th>
+            <td>{{Array.FullName}}</td>
+            <td><button class="click-btn">Click</button></td>
+            <td>{{Array.MobileNumber}}</td>
+        </tr>
+    </tbody>
+</table>
+

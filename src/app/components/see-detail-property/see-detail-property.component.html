@@ -1,0 +1,26 @@
+<div>
+    <mat-card class="user-card">
+        <div>
+            <mat-card-title style="text-decoration-line: underline;">Requests Page</mat-card-title>
+        </div>
+
+    </mat-card>
+</div>
+<div class="Property-info" >
+    <!-- <div style=" border: 1px solid red;" *ngFor="let Property of PropertyList"> -->
+    <div class="mat-card-info" fxLayout="row" fxLayoutGap="20" *ngFor="let property of PropertyArray" >
+        <img mat-card-image src="../../../assets/Image/property1.jpg" alt="">
+        <div style="width:50% ;"  fxLayout="column" fxLayoutAlign="center center" >
+            <mat-card-content style="font-size:20px ;" >{{property.PropertyName}}</mat-card-content>
+            <mat-card-content>Location- {{property.Location}}</mat-card-content>
+            <mat-card-content>City- {{property.City}}</mat-card-content>
+            <mat-card-content>SquareFts- {{property.SquareFts}}</mat-card-content>
+            <mat-card-content>RentCost- Rs {{property.RentCost}}</mat-card-content>
+            <mat-card-content>Type- {{property.Type}} BHK</mat-card-content>
+            <div class="btn-action" fxLayout="row" fxLayoutAlign="space-around center">
+                <button mat-flat-button color="primary" matTooltip="Send Request" aria-label="Button that displays a tooltip when focused or hovered over" (click)="openDialog(property)" >Request</button>
+            </div>
+        </div>
+    </div>
+
+</div>
