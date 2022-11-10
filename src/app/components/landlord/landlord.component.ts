@@ -13,11 +13,14 @@ import { UpdatePropertyComponent } from '../update-property/update-property.comp
 export class LandlordComponent implements OnInit {
 
   PropertyList:any;
+  UserId:any;
 
 
   constructor(private getproperty:PropertyServiceService,private snackbar:MatSnackBar, public dialog: MatDialog) { }
 
   ngOnInit(): void {
+
+    this.UserId=localStorage.getItem('UserId');
 
     this.getallproperty();
   }
@@ -25,7 +28,7 @@ export class LandlordComponent implements OnInit {
   getallproperty(){
     console.log("get all property")
 
-    this.getproperty.getallproperty().subscribe((response: any) => {
+    this.getproperty.getallproperty(this.UserId).subscribe((response: any) => {
       console.log(response)
 
       this.PropertyList = response.Data;

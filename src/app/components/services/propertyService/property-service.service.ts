@@ -24,7 +24,7 @@ export class PropertyServiceService {
     return this.httpService.postService('/addProperty', reqdata, false, header)
   }
 
-getallproperty(){
+getallproperty(UserId:any){
 
   let header = {
     Headers: new HttpHeaders({
@@ -32,7 +32,7 @@ getallproperty(){
       'Content-type': 'application/json',
     })
   }
-  return this.httpService.GetService('/getall', false, header)
+  return this.httpService.GetService(`/getall?UserId=${UserId}`, false, header)
 }
 
 deleteproprty(PropertyId:any){
