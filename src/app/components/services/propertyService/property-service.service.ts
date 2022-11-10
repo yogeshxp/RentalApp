@@ -107,4 +107,29 @@ getresponseProperty(PropertyId:any){
 
 
 
+getallrequest(){
+
+  let header = {
+    Headers: new HttpHeaders({
+
+      'Content-type': 'application/json',
+    })
+  }
+  return this.httpService.GetService(`/getallrequest`, false, header)
+
+}
+
+
+deleteRequest(RequestId:any){
+  let header = {
+    Headers: new HttpHeaders({
+
+      'Content-type': 'application/json',
+    })
+  }
+  return this.httpService.deleteservices(`/DeleteRequest?RequestId=${RequestId}`, false, header)
+}
+
+
+
 }

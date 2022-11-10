@@ -10,19 +10,24 @@
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">S.No</th>
+            <th scope="col" class="s_number">S.No</th>
             <th scope="col">Full Name</th>
             <th scope="col">See More detail</th>
             <th scope="col">Mobile Number</th>
+            <th scope="col">Action</th>
 
         </tr>
     </thead>
     <tbody >
-        <tr *ngFor="let Array of RequestArray">
-            <th scope="row"  >1</th>
+        <tr *ngFor="let Array of RequestArray ; let i = index" >
+            <th scope="row">{{i+1}}</th>
             <td>{{Array.FullName}}</td>
             <td><button class="click-btn">Click</button></td>
             <td>{{Array.MobileNumber}}</td>
+            <td>
+                <img width="24px" src="../../../assets/Image/done_FILL0_wght400_GRAD0_opsz48.svg" alt="" class="img-tick" >
+                <img width="24px" src="../../../assets/Image/delete_FILL0_wght400_GRAD0_opsz48.svg" alt="" (click)="deleteRequest(RequestList)">
+            </td>
         </tr>
     </tbody>
 </table>

@@ -1,7 +1,12 @@
 
 <div  class="container">
-    <mat-card class="user-card">      
-        <mat-card-title style="text-decoration-line: underline;" routerLink="/dashboard/landlord">List of Your Properties</mat-card-title>        
+    <mat-card class="user-card">
+        <div fxLayout="row" fxLayoutAlign="space-around center" style="margin-right: 30%;">
+            <button mat-fab color="primary" aria-label="Example icon button with a delete icon" routerLink="/dashboard/landlord">
+                <mat-icon>chevron_left</mat-icon>
+            </button>    
+            <mat-card-title style="text-decoration-line: underline;">List of Your Properties</mat-card-title>  
+        </div> 
         <div fxLayout="column" fxLayoutAlign="space-around center" [formGroup]="AddPropertyForm" >
             <mat-form-field appearance="outline" class="form" style="padding-bottom: 0em;">
                 <mat-label>Property Name</mat-label>

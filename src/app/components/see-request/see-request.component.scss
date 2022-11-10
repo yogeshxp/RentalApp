@@ -11,3 +11,19 @@
     color: white;
     border: none;
 }
+
+.img-tick{
+    margin-right: 10px;
+}
+
+
+body {
+    /* Set "my-sec-counter" to 0 */
+    counter-reset: my-sec-counter;
+  }
+  
+  h2::before {
+    /* Increment "my-sec-counter" by 1 */
+    counter-increment: my-sec-counter;
+    content: "Section " counter(my-sec-counter) ". ";
+  }

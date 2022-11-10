@@ -16,11 +16,16 @@ export class SeeRequestComponent implements OnInit {
 
   PropertyId:any;
   RequestArray:any;
+  RequestList:any;
+  RequestId:any;
 
   ngOnInit(): void {
     this.PropertyId=this.activeroute.snapshot.paramMap.get('PropertyId');
+    this.RequestId=this.activeroute.snapshot.paramMap.get('RequestId');
+
     this.getresponseReq(this.PropertyId);
     console.log("Yogesh"+this.PropertyId);
+    this.getallrequest();
 
   }
 
@@ -35,4 +40,25 @@ export class SeeRequestComponent implements OnInit {
       this.RequestArray = response.Data;
     })
   }
+
+  getallrequest(){
+    console.log("get all requestid")
+    this.property.getallrequest().subscribe((response:any) => {
+      console.log(response)
+      this.RequestList = response.Data;
+      console.log(this.RequestList);
+
+    })
+  }
+
+  deleteRequest(Data:any){
+    console.log(Data);
+    console.log("delete request =====>" + Data)
+    this.property.deleteRequest(Data.RequestId).subscribe((response:any)=> {
+      console.log(response)
+      
+    })
+  }
+
+
 }
