@@ -36,6 +36,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar'; 
 import {MatRadioModule} from '@angular/material/radio';
+import { PracticeComponent } from './components/practice/practice.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import {MatRadioModule} from '@angular/material/radio';
     GetAllPropertyComponent,
     SeeDetailPropertyComponent,
     RequestPageComponent,
-    SeeRequestComponent
+    SeeRequestComponent,
+    PracticeComponent,
 
   ],
   imports: [

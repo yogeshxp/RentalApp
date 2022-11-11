@@ -7,6 +7,7 @@ import { DisplayHomeComponent } from './components/display-home/display-home.com
 import { GetAllPropertyComponent } from './components/get-all-property/get-all-property.component';
 import { LandlordComponent } from './components/landlord/landlord.component';
 import { LoginComponent } from './components/login/login.component';
+import { PracticeComponent } from './components/practice/practice.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { SeeDetailPropertyComponent } from './components/see-detail-property/see-detail-property.component';
 import { SeeRequestComponent } from './components/see-request/see-request.component';
@@ -23,7 +24,8 @@ const routes: Routes = [
       {path:'getall', component:GetAllPropertyComponent},
       {path:'propertydetail/:PropertyId', component:SeeDetailPropertyComponent},
       {path:'seerequest/:PropertyId', component:SeeRequestComponent}
-    ]}
+    ]},
+  {path:'practice', component:PracticeComponent}  
 ];
 
 @NgModule({
